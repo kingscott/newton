@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src ="https://raw.githubusercontent.com/kingscott/newton/master/icon48.png" />
+  <img src ="https://raw.githubusercontent.com/kingscott/newton/master/icon128.png" />
   <br/>
   newton
 </h1>
