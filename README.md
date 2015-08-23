@@ -22,7 +22,7 @@ If you're interested in viewing/running/forking the code, here are the instructi
 ➜  ~ npm start
 ```
 
-This repo uses webpack-dev-server, so if you make a change to src/app.js and save it will recompile and hot-load the app at localhost:2020. If you want to create a build.js file to use somewhere (for production), then run:
+This repo uses webpack-dev-server, so if you make a change to src/app.js and save, it will recompile and hot-load the app at localhost:2020. If you want to create a build.js file to use somewhere (for production), then run:
 
 ```shell
 ➜  ~ npm run build-app
