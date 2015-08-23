@@ -5,7 +5,7 @@
 </h1>
 
 # get it on the [chrome store](https://chrome.google.com/webstore/detail/newton/ogkmipmkbppmcmdgeomnhlbgijbijjpi)
-![marquee](https://raw.githubusercontent.com/davidrusu/newton/master/icons/screenshot2.png)
+![marquee](https://raw.githubusercontent.com/kingscott/newton/master/icons/screenshot2.png)
 
 Replaces your new tab with a minimal page, consisting of a clock and one of over 800 beautiful backgrounds!
 
