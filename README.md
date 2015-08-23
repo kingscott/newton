@@ -18,4 +18,4 @@ This repo uses webpack-dev-server, so if you make a change to src/app.js and sav
 
 ## requirements
 
-Should have npm install.
+Should have npm installed.
