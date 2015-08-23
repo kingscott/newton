@@ -1,4 +1,12 @@
-# newton
+<h1 align="center">
+  <img src ="icons/icon48.png" />
+  <br/>
+  newton
+</h1>
+
+# get it on the [chrome store](https://chrome.google.com/webstore/detail/newton/ogkmipmkbppmcmdgeomnhlbgijbijjpi)
+![marquee](https://raw.githubusercontent.com/davidrusu/newton/master/icons/screenshot2.png)
+
 Replaces your new tab with a minimal page, consisting of a clock and one of over 800 beautiful backgrounds!
 
 ## technical and forking
