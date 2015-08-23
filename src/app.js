@@ -38,7 +38,6 @@ const App = React.createClass({
       display: 'table-cell',
       color: 'white',
       fontSize: '200px',
-      fontFamily: 'Fira Sans Light, helvetica, helvetica neue, arial',
       textAlign: 'center',
       verticalAlign: 'middle',
       opacity: '0.75'
