@@ -53,8 +53,5 @@ module.exports = {
     extensions: ['', '.js']
   },
   plugins: plugins,
-  eslint: {configFile: '.eslintrc'},
-  node: {
-    fs: "empty"
-  }
+  eslint: {configFile: '.eslintrc'}
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-const backgroundsArr = require('../backgrounds.js');
+import backgroundsArr from '../backgrounds.js'; 
 const backgroundIndex = Math.floor(Math.random() * 806);
 
 const currentTime = () => {
