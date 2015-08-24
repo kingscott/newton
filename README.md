@@ -33,3 +33,5 @@ and it will show up in lib/build.js.
 ## requirements
 
 npm
+
+**Note:** I did not include the file I pull backgrounds from as it could make the app compromised.
