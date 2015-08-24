@@ -1,6 +1,6 @@
 {
   "name": "newton",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "A minimalistic new tab replacer",
   "main": "index.js",
   "scripts": {
