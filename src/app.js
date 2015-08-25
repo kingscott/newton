@@ -1,15 +1,15 @@
 import React from 'react';
-import backgroundsArr from '../backgrounds.js'; 
+import backgroundsArr from '../backgrounds.js';
 const backgroundIndex = Math.floor(Math.random() * 806);
 
 const currentTime = () => {
   const date = new Date(Date.now());
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
   let returnedHours = hours;
   if (hours === 0) { returnedHours += 12; }
   else if (hours > 12) { returnedHours -= 12; }
-  let returnedMinutes = minutes < 10 ?
+  const returnedMinutes = minutes < 10 ?
     '0' + minutes : minutes;
 
   return returnedHours + ':' + returnedMinutes;

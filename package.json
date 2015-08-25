@@ -2,7 +2,7 @@
   "name": "newton",
   "version": "0.5.2",
   "description": "A minimalistic new tab replacer",
-  "main": "index.js",
+  "main": "./lib/full/build.js",
   "scripts": {
     "build": "babel src --out-dir lib",
     "build-app": "NODE_ENV=production webpack -p",
@@ -23,6 +23,7 @@
     "babel-eslint": "^4.0.10",
     "babel-loader": "^5.3.2",
     "eslint": "^1.2.1",
+    "eslint-config-airbnb": "0.0.8",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.2.3",
     "react-imageloader": "^2.1.0",
