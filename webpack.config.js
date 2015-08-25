@@ -1,16 +1,17 @@
 var webpack = require('webpack');
 
-var devtool;
 var loaders = ['babel'];
 var port = process.env.PORT || 2020;
-var entry = {
-  full: './lib/app.js'
-};
+
 var plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   })
 ];
+var entry = {
+  full: './lib/app.js'
+};
+var devtool;
 
 if (process.env.NODE_ENV === 'development') {
   devtool = 'eval-source-map';
@@ -19,7 +20,7 @@ if (process.env.NODE_ENV === 'development') {
   ]);
   entry = Object.keys(entry).reduce(function (result, key) {
     result[key] = [
-      'webpack-dev-server/client?http://localhost' + port,
+      'webpack-dev-server/client?http://localhost:' + port,
       'webpack/hot/only-dev-server',
       entry[key]
     ];
@@ -42,16 +43,16 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /lib|node_modules/,
+      exclude: /build|lib|node_modules/,
       loaders: loaders
     }],
     preLoaders: [
-      {test: /\.js$/, loader: 'eslint', exclude: /lib|node_modules/}
-    ]
+      {test: /\.js$/, loader: 'eslint', exclude: /build|lib|node_modules/},
+    ],
   },
   resolve: {
     extensions: ['', '.js']
   },
   plugins: plugins,
-  eslint: {configFile: '.eslintrc'}
+  eslint: {configFile: '.eslintrc'},
 };
