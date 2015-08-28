@@ -20,7 +20,7 @@ const App = React.createClass({
   getInitialState() {
     setInterval(() => {
       this.setState({ time: currentTime() });
-    }.bind(this), 1 * 1000);
+    }, 1 * 1000);
     return { time: currentTime() };
   },
 
