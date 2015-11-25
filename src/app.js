@@ -3,6 +3,25 @@ import {h, makeDOMDriver} from '@cycle/dom';
 import backgroundsArr from '../backgrounds.js';
 const backgroundIndex = Math.floor(Math.random() * 806);
 
+const divStyles = {
+  display: 'table',
+  backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  width: '100%',
+  height: '100%'
+};
+
+const textStyles = {
+  display: 'table-cell',
+  color: 'white',
+  fontSize: '200px',
+  textAlign: 'center',
+  verticalAlign: 'middle',
+  opacity: '0.75'
+};
+
 function currentTime() {
   const date = new Date(Date.now());
   const hours = date.getHours();
@@ -16,6 +35,18 @@ function currentTime() {
   return returnedHours + ':' + returnedMinutes;
 }
 
+function main() {
+// TODO grab new background
+
+  return h('div', [
+    h('p', {
+      style: textStyles
+    }, currentTime())
+  ], {
+    style: {divStyles}
+  });
+}
+
 const App = React.createClass({
 
   getInitialState() {
@@ -26,23 +57,23 @@ const App = React.createClass({
   },
 
   render() {
-    const divStyles = {
-      display: 'table',
-      backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      width: '100%',
-      height: '100%'
-    };
-    const textStyles = {
-      display: 'table-cell',
-      color: 'white',
-      fontSize: '200px',
-      textAlign: 'center',
-      verticalAlign: 'middle',
-      opacity: '0.75'
-    };
+    // const divStyles = {
+    //   display: 'table',
+    //   backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
+    //   backgroundPosition: 'center',
+    //   backgroundSize: 'cover',
+    //   backgroundRepeat: 'no-repeat',
+    //   width: '100%',
+    //   height: '100%'
+    // };
+    // const textStyles = {
+    //   display: 'table-cell',
+    //   color: 'white',
+    //   fontSize: '200px',
+    //   textAlign: 'center',
+    //   verticalAlign: 'middle',
+    //   opacity: '0.75'
+    // };
     return (
       <div style={divStyles}>
         <p style={textStyles}> {this.state.time} </p>
