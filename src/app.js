@@ -1,8 +1,9 @@
-import React from 'react';
+import {run} from '@cycle/core';
+import {h, makeDOMDriver} from '@cycle/dom';
 import backgroundsArr from '../backgrounds.js';
 const backgroundIndex = Math.floor(Math.random() * 806);
 
-const currentTime = () => {
+function currentTime() {
   const date = new Date(Date.now());
   const hours = date.getHours();
   const minutes = date.getMinutes();
@@ -13,7 +14,7 @@ const currentTime = () => {
     '0' + minutes : minutes;
 
   return returnedHours + ':' + returnedMinutes;
-};
+}
 
 const App = React.createClass({
 
@@ -50,6 +51,6 @@ const App = React.createClass({
   }
 });
 
-React.render(<App />, document.getElementById('app'));
-
-export default App;
+run(main, {
+  // DOM: TODO
+});
