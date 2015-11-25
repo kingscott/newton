@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'development') {
   plugins = plugins.concat([
     new webpack.HotModuleReplacementPlugin()
   ]);
-  entry = Object.keys(entry).reduce(function (result, key) {
+  entry = Object.keys(entry).reduce(function(result, key) {
     result[key] = [
       'webpack-dev-server/client?http://localhost:' + port,
       'webpack/hot/only-dev-server',
