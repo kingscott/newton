@@ -35,53 +35,20 @@ function currentTime() {
   return returnedHours + ':' + returnedMinutes;
 }
 
-function main() {
-// TODO grab new background
-
-  return h('div', [
-    h('p', {
-      style: textStyles
-    }, currentTime())
-  ], {
-    style: {divStyles}
-  });
+function main(responses) {
+  const requests = {
+    DOM: responses.DOM.select('.field').events('input')
+      .map(ev => ev.target.value)
+      .startWith('')
+      .map(name =>
+        h('div', [
+          h('p', Date())
+        ])
+      )
+  };
+  return requests;
 }
 
-const App = React.createClass({
-
-  getInitialState() {
-    setInterval(() => {
-      this.setState({ time: currentTime() });
-    }, 1 * 1000);
-    return { time: currentTime() };
-  },
-
-  render() {
-    // const divStyles = {
-    //   display: 'table',
-    //   backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
-    //   backgroundPosition: 'center',
-    //   backgroundSize: 'cover',
-    //   backgroundRepeat: 'no-repeat',
-    //   width: '100%',
-    //   height: '100%'
-    // };
-    // const textStyles = {
-    //   display: 'table-cell',
-    //   color: 'white',
-    //   fontSize: '200px',
-    //   textAlign: 'center',
-    //   verticalAlign: 'middle',
-    //   opacity: '0.75'
-    // };
-    return (
-      <div style={divStyles}>
-        <p style={textStyles}> {this.state.time} </p>
-      </div>
-    );
-  }
-});
-
 run(main, {
-  // DOM: TODO
+  DOM: makeDOMDriver('.app')
 });

@@ -1,66 +1,10 @@
 <!doctype html>
 <html>
-<head>
-  <title> New Tab </title>
-  <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-
-    .app {
-      height: 100%;
-      -webkit-transition: fadein 4s;
-      -moz-animation: fadein 4s;
-      -ms-animation: fadein 4s;
-      -o-animation: fadein 4s;
-      animation: fadein 4s;
-      font-family: 'Fira Sans', sans-serif;
-      text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
-    }
-
-    @keyframes fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @-webkit-keyframes fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @-moz-keyframes fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @-ms-keyframes fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @-o-keyframes fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-  </style>
-  <div id="app" class="app"></div>
-  <script src="./lib/full/build.js"></script>
-</body>
+  <head>
+    <title> New Tab </title>
+  </head>
+  <body>
+    <div class="app"></div>
+    <script src="dist/app.js"></script>
+  </body>
 </html>

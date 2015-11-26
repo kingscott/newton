@@ -1,21 +1,22 @@
 {
   "name": "newton",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "description": "A minimalistic new tab replacer",
+  "main": "./src/main.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "build-app": "NODE_ENV=production webpack -p",
-    "start": "NODE_ENV=development node server.js"
+    "start": "NODE_ENV=development node server.js",
+    "build": "NODE_ENV=production webpack -p"
   },
-  "author": "Scott King",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingscott/newton.git"
+  },
+  "author": "kingscott",
   "license": "ISC",
-  "dependencies": {
-    "@cycle/core": "^5.0.1",
-    "@cycle/dom": "^7.1.1",
-    "immutable": "^3.7.5",
-    "keymirror": "latest",
-    "rx": "^4.0.6"
+  "bugs": {
+    "url": "https://github.com/kingscott/newton/issues"
   },
+  "homepage": "https://github.com/kingscott/newton#readme",
   "devDependencies": {
     "babel": "^5.6.14",
     "babel-core": "^5.6.18",
@@ -28,5 +29,12 @@
     "eslint-plugin-babel": "^2.1.1",
     "webpack": "^1.12.4",
     "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "@cycle/core": "^5.0.1",
+    "@cycle/dom": "^7.1.1",
+    "immutable": "^3.7.5",
+    "keymirror": "latest",
+    "rx": "^4.0.6"
   }
 }
