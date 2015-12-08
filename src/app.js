@@ -2,7 +2,7 @@ import React from 'react';
 import backgroundsArr from '../backgrounds.js';
 const backgroundIndex = Math.floor(Math.random() * 806);
 
-const currentTime = () => {
+function currentTime() {
   const date = new Date(Date.now());
   const hours = date.getHours();
   const minutes = date.getMinutes();
@@ -16,7 +16,6 @@ const currentTime = () => {
 };
 
 const App = React.createClass({
-
   getInitialState() {
     setInterval(() => {
       this.setState({ time: currentTime() });
