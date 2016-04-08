@@ -1,7 +1,0 @@
-node_modules
-build
-lib
-dist
-webpack.*.js
-server.js
-build.js

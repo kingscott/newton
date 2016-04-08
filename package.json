@@ -6,12 +6,12 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "build-app": "NODE_ENV=production webpack -p",
-    "lint": "eslint --ext .js",
     "start": "NODE_ENV=development node server.js"
   },
   "author": "Scott King",
   "license": "ISC",
   "dependencies": {
+    "material-ui": "^0.15.0-alpha.2",
     "react": "^0.13.3"
   },
   "engines": {
@@ -22,11 +22,8 @@
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.10",
     "babel-loader": "^5.3.2",
-    "eslint": "^1.2.1",
-    "eslint-config-airbnb": "0.0.8",
-    "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^3.2.3",
-    "react-imageloader": "^2.1.0",
+    "standard": "^6.0.8",
+    "standard-loader": "^3.0.0",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1"
   }

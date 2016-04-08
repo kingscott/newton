@@ -1,54 +1,90 @@
-import React from 'react';
-import backgroundsArr from '../backgrounds.js';
-const backgroundIndex = Math.floor(Math.random() * 806);
+import React from 'react'
+import backgroundsArr from '../backgrounds.js'
+const backgroundIndex = Math.floor(Math.random() * 806)
 
-function currentTime() {
-  const date = new Date(Date.now());
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  let returnedHours = hours;
-  if (hours === 0) { returnedHours += 12; }
-  else if (hours > 12) { returnedHours -= 12; }
-  const returnedMinutes = minutes < 10 ?
-    '0' + minutes : minutes;
+function currentTime () {
+  const date = new Date(Date.now())
+  const hours = date.getHours()
+  const minutes = date.getMinutes()
+  let returnedHours = hours
+  if (hours === 0) { returnedHours += 12 }
+  else if (hours > 12) { returnedHours -= 12 }
+  const returnedMinutes = minutes < 10
+  ? '0' + minutes : minutes
 
-  return returnedHours + ':' + returnedMinutes;
+  return returnedHours + ':' + returnedMinutes
 };
 
 const App = React.createClass({
-  getInitialState() {
+  getInitialState () {
     setInterval(() => {
-      this.setState({ time: currentTime() });
-    }, 1 * 1000);
-    return { time: currentTime() };
+      this.setState({ time: currentTime() })
+    }, 1 * 1000)
+    return { time: currentTime() }
   },
 
-  render() {
-    const divStyles = {
-      display: 'table',
+  render () {
+    // const divStyles = {
+    //   display: 'table',
+    //   backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
+    //   backgroundPosition: 'center',
+    //   backgroundSize: 'cover',
+    //   backgroundRepeat: 'no-repeat',
+    //   width: '100%',
+    //   height: '100%'
+    // }
+    const div2Styles = {
+      // alignItems: 'center',
+      // justifyContent: 'center',
       backgroundImage: 'url(' + backgroundsArr[backgroundIndex] + ')',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       width: '100%',
       height: '100%'
-    };
-    const textStyles = {
-      display: 'table-cell',
+    }
+    // const textStyles = {
+    //   display: 'table-cell',
+    //   color: 'white',
+    //   fontSize: '200px',
+    //   textAlign: 'center',
+    //   verticalAlign: 'middle',
+    //   opacity: '0.75'
+    // }
+    const text2Styles = {
+      maxWidth: '100%',
       color: 'white',
       fontSize: '200px',
       textAlign: 'center',
-      verticalAlign: 'middle',
-      opacity: '0.75'
-    };
+      opacity: '0.75',
+      width: '100%'
+    }
+    // const settings = {
+    //   alignSelf: 'flex-end'
+    // }
+    const section = {
+      display: 'flex',
+      flexFlow: 'column',
+      background: 'black',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%'
+    }
+
     return (
-      <div style={divStyles}>
-        <p style={textStyles}> {this.state.time} </p>
+      <div style={section}>
+        <div style={div2Styles}>
+          <p style={text2Styles}> {this.state.time} </p>
+        </div>
       </div>
-    );
+    )
   }
-});
+})
 
-React.render(<App />, document.getElementById('app'));
+// <div style={settings}>
+//   <img src={'../images/settings.png'} />
+// </div>
 
-export default App;
+React.render(<App />, document.getElementById('app'))
+
+export default App
