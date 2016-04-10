@@ -8,7 +8,6 @@ config.entry = Object.keys(config.entry).reduce(function (result, key) {
     'webpack-dev-server/client?http://localhost:' + port,
     config.entry[key]
   ]
-  console.log(result)
   return result
 }, {})
 

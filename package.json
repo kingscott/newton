@@ -6,13 +6,16 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "build-app": "NODE_ENV=production webpack -p",
-    "start": "NODE_ENV=development node server.js"
+    "start": "NODE_ENV=development node server.js",
+    "test": "standard src/app.js"
   },
   "author": "Scott King",
   "license": "ISC",
   "dependencies": {
     "material-ui": "^0.15.0-alpha.2",
-    "react": "^0.13.3"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-tap-event-plugin": "^0.2.2"
   },
   "engines": {
     "node": "0.12.7"
