@@ -7,7 +7,7 @@
 # get it on the [chrome store](https://chrome.google.com/webstore/detail/newton/ogkmipmkbppmcmdgeomnhlbgijbijjpi)
 ![marquee](https://raw.githubusercontent.com/kingscott/newton/master/screenshot2.png)
 
-Replaces your new tab with a minimal page, consisting of a clock and one of over 800 beautiful backgrounds nature backgrounds or <sub><sup>approximately</sup></sub> 3 million pictures from ASTER aboard the NASA's Terra satellite!
+Replaces your new tab with a minimal page, consisting of a clock and one of over 800 beautiful backgrounds nature backgrounds or <sub><sup>approximately</sup></sub> 3 million pictures from ASTER aboard NASA's Terra satellite!
 
 ## technical and forking
 It's built using React.js.
