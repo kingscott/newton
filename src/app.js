@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom'
 import backgroundsArr from '../backgrounds.js'
 import Settings from 'material-ui/lib/svg-icons/action/settings'
 import injectTapEventPlugin from 'react-tap-event-plugin'
-import SettingsApplications from 'material-ui/lib/svg-icons/action/settings-applications'
+// import SettingsApplications from 'material-ui/lib/svg-icons/action/settings-applications'
+import pure from 'recompose/pure'
 import IconButton from 'material-ui/lib/icon-button'
+import RaisedButton from 'material-ui/lib/raised-button'
+import Popover from 'material-ui/lib/popover/popover'
+import SelectField from 'material-ui/lib/SelectField'
+import MenuItem from 'material-ui/lib/menus/menu-item'
 
 const backgroundIndex = Math.floor(Math.random() * 806)
 
@@ -29,16 +34,16 @@ export default class App extends React.Component {
     }, 1 * 1000)
     this.state = {
       time: currentTime(),
-      theme: 'nature',
+      theme: 1,
       open: false
     }
   }
 
-  handlePop () {
-    // this.setState({
-    //   open: true
-    // })
-    console.log('hello')
+  handlePop (event) {
+    this.setState({
+      open: true,
+      anchorEl: event.currentTarget
+    })
   }
 
   handleRequestClose () {
@@ -67,7 +72,11 @@ export default class App extends React.Component {
       icon: {
         position: 'absolute',
         top: '1rem',
-        right: '1rem'
+        right: '1rem',
+        margin: '0px'
+      },
+      popover: {
+        padding: '20px'
       },
       section: {
         display: 'flex',
@@ -83,11 +92,35 @@ export default class App extends React.Component {
       }
     }
 
+    // let NewSettings = (props) => (
+    //   ` <Settings {...props} color={props.color} hoverColor={props.hoverColor} >
+    //       <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+    //     </Settings>`
+    // )
+    //
+    // NewSettings = pure(NewSettings)
+    // NewSettings.displayName = 'NewSettings'
+    // let s = {
+    //   color: 'white',
+    //   hoverColor: '#55ff55'
+    // }
+
     return (
       <div style={styles.section}>
         <p style={styles.textStyles}> {this.state.time} </p>
-        <IconButton tooltip="Font Icon" iconStyle={{iconHoverColor: '#55ff55'}} style={styles.icon}>
-          <Settings style={styles.settings} color={'white'} hoverColor={'#55ff55'} />
+        <IconButton style={styles.icon} color={'white'} onClick={(e) => this.handlePop(e)}>
+          <Settings color={'white'} />
+          <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+          targetOrigin={{horizontal: 'right', vertical: 'top'}}
+          onRequestClose={() => this.handleRequestClose()}
+        >
+          <div style={styles.popover}>
+            <p> Need to abstract bro </p>
+          </div>
+        </Popover>
         </IconButton>
       </div>
     )
@@ -95,8 +128,6 @@ export default class App extends React.Component {
 }
 
 injectTapEventPlugin()
-
-        // <Settings style={styles.settings} color={'white'} hoverColor={'#55ff55'} onClick={this.handlePop} />
 
 ReactDOM.render(
   <App />,
