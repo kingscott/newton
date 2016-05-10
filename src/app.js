@@ -1,8 +1,10 @@
+'use-strict'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
-import backgroundsArr from '../backgrounds.js'
+import backgroundsArr from '../backgrounds'
 // import Settings from 'material-ui/lib/svg-icons/action/settings'
-import injectTapEventPlugin from 'react-tap-event-plugin'
+// import injectTapEventPlugin from 'react-tap-event-plugin'
 // import SettingsApplications from 'material-ui/lib/svg-icons/action/settings-applications'
 // import pure from 'recompose/pure'
 // import IconButton from 'material-ui/lib/icon-button'
@@ -116,7 +118,7 @@ export default class App extends React.Component {
 //         </Popover>
 //         </IconButton>
 
-injectTapEventPlugin()
+// injectTapEventPlugin()
 
 ReactDOM.render(
   <App />,

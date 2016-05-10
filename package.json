@@ -13,9 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "material-ui": "^0.15.0-alpha.2",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
-    "react-tap-event-plugin": "^0.2.2",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-tap-event-plugin": "^1.0.0",
     "recompose": "^0.17.0"
   },
   "engines": {
@@ -24,11 +24,10 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-core": "^5.8.22",
-    "babel-eslint": "^4.0.10",
     "babel-loader": "^5.3.2",
-    "standard": "^6.0.8",
+    "standard": "^7.0.1",
     "standard-loader": "^3.0.0",
-    "webpack": "^1.11.0",
-    "webpack-dev-server": "^1.10.1"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   }
 }

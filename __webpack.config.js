@@ -9,7 +9,7 @@ var plugins = [
   })
 ]
 var entry = {
-  full: './lib/app.js'
+  full: './src/app.js'
 }
 var devtool
 
